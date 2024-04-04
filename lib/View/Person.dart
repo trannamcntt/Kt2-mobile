@@ -40,7 +40,7 @@ class PersonState extends State<Person> {
             Center(
               child: Padding(
                 padding: EdgeInsets.only(top: 36),
-                child: Text('Xin chào Nguyễn Thọ Quân', style: TextStyle(fontSize: 24),),
+                child: Text('Xin chào Boss!', style: TextStyle(fontSize: 24),),
               ),
             ),
             Padding(
@@ -74,59 +74,54 @@ class PersonState extends State<Person> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-              icon: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.home),
-              ),
-              label: "Tổng quan"
-          ),
-          BottomNavigationBarItem(
-            icon: IconButton(
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.black87,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.home),
+              color: Colors.white,
+            ),
+            IconButton(
               onPressed: () {},
               icon: Icon(Icons.account_balance_wallet),
+              color: Colors.white,
             ),
-            label: "Sổ giao dịch",
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: EdgeInsets.only(top: 18.0),
-              child: IconButton(
-                onPressed: () {
-                  setState(() {
-                    symbolData = symbol;
-                  });
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => NewTransaction(symbol: symbolData,))
-                  );
-                },
-                icon: Icon(Icons.add, size: 36,),
-              ),
+            IconButton(
+              onPressed: () {
+                setState(() {
+                  symbolData = symbol;
+                });
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => NewTransaction(symbol: symbolData))
+                );
+              },
+              icon: Icon(Icons.add),
+              color: Colors.white,
             ),
-            label: "",
-          ),
-          BottomNavigationBarItem(
+            IconButton(
+              onPressed: () {},
               icon: Icon(Icons.paid),
-              label: "Ngân sách"
-          ),
-          BottomNavigationBarItem(
-              icon: IconButton(
-                onPressed: () {
-                  setState(() {});
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Person(symbol: symbolData, img: imgData, name: nameData)
-                  ));
-                },
-                icon: Icon(Icons.person),
-              ),
-              label: "Tài khoản"
-          )
-        ],
-        selectedItemColor: Colors.white54,
-        showUnselectedLabels: true,
-        unselectedItemColor: Colors.white54,
+              color: Colors.white,
+            ),
+            IconButton(
+              onPressed: () {
+                setState(() {
+                  symbolData = symbol;
+                  imgData = img;
+                  nameData = name;
+                });
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => Person(symbol: symbolData, img: imgData, name: nameData)
+                ));
+              },
+              icon: Icon(Icons.person),
+              color: Colors.white,
+            ),
+          ],
+        ),
       ),
     );
   }

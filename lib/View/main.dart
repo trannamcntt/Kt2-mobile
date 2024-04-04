@@ -145,7 +145,7 @@ class HomeState extends State<HomePage> {
                         children: [
                           const Text("Ví của tôi", textAlign: TextAlign.start, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                           Padding(
-                            padding: const EdgeInsets.only(left: 267.7),
+                            padding: const EdgeInsets.only(left: 159.4),
                             child: TextButton(onPressed: () {},
                                 child: const Text("Xem tất cả", style: TextStyle(color: Colors.green),)
                             ),
@@ -189,7 +189,7 @@ class HomeState extends State<HomePage> {
                       children: [
                         const Text("Báo cáo chi tiêu", style: TextStyle(color: Colors.white54),),
                         Padding(
-                          padding: const EdgeInsets.only(left: 254),
+                          padding: const EdgeInsets.only(left: 146.9),
                           child: TextButton(
                             onPressed: () {},
                             child: const Text("Xem báo cáo", style: TextStyle(color: Colors.green),),
@@ -317,63 +317,54 @@ class HomeState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-              icon: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.home),
-              ),
-              label: "Tổng quan"
-          ),
-          BottomNavigationBarItem(
-              icon: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.account_balance_wallet),
-              ),
-              label: "Sổ giao dịch",
-          ),
-          BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(top: 18.0),
-                child: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      symbolData = symbol;
-                    });
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => NewTransaction(symbol: symbolData))
-                    );
-                  },
-                  icon: Icon(Icons.add, size: 36,),
-                ),
-              ),
-              label: "",
-          ),
-          BottomNavigationBarItem(
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.black87,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.home),
+              color: Colors.white,
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.account_balance_wallet),
+              color: Colors.white,
+            ),
+            IconButton(
+              onPressed: () {
+                setState(() {
+                  symbolData = symbol;
+                });
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => NewTransaction(symbol: symbolData))
+                );
+              },
+              icon: Icon(Icons.add),
+              color: Colors.white,
+            ),
+            IconButton(
+              onPressed: () {},
               icon: Icon(Icons.paid),
-              label: "Ngân sách"
-          ),
-          BottomNavigationBarItem(
-              icon: IconButton(
-                onPressed: () {
-                  setState(() {
-                    symbolData = symbol;
-                    imgData = img;
-                    nameData = name;
-                  });
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Person(symbol: symbolData, img: imgData, name: nameData)
-                  ));
-                },
-                icon: Icon(Icons.person),
-              ),
-              label: "Tài khoản"
-          )
-        ],
-        selectedItemColor: Colors.white54,
-        showUnselectedLabels: true,
-        unselectedItemColor: Colors.white54,
+              color: Colors.white,
+            ),
+            IconButton(
+              onPressed: () {
+                setState(() {
+                  symbolData = symbol;
+                  imgData = img;
+                  nameData = name;
+                });
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => Person(symbol: symbolData, img: imgData, name: nameData)
+                ));
+              },
+              icon: Icon(Icons.person),
+              color: Colors.white,
+            ),
+          ],
+        ),
       ),
     );
   }

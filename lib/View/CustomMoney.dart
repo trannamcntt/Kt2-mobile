@@ -67,7 +67,7 @@ class CustomMoneyState extends State<CustomMoney> {
         ),
       ),
       floatingActionButton: Container(
-        width: 475,
+        width: 365,
         height: 40,
         child: FloatingActionButton(
           onPressed: () {

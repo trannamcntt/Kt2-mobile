@@ -40,7 +40,7 @@ class RegisterState extends State<RegisterPage> {
                             )
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 80),
+                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 35),
                             child: Row(
                               children: [
                                 Image.asset(
@@ -48,7 +48,7 @@ class RegisterState extends State<RegisterPage> {
                                   width: 18,
                                 ),
                                 const Padding(
-                                  padding: EdgeInsets.only(left: 30),
+                                  padding: EdgeInsets.only(left: 25),
                                   child: Text("KẾT NỐI VỚI FACEBOOK", style: TextStyle(color: Colors.blueAccent,),),
                                 )
                               ],
@@ -67,7 +67,7 @@ class RegisterState extends State<RegisterPage> {
                               )
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 80),
+                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 35),
                             child: Row(
                               children: [
                                 Image.asset(
@@ -75,7 +75,7 @@ class RegisterState extends State<RegisterPage> {
                                   width: 18,
                                 ),
                                 const Padding(
-                                  padding: EdgeInsets.only(left: 36),
+                                  padding: EdgeInsets.only(left: 25),
                                   child: Text("KẾT NỐI VỚI GOOGLE", style: TextStyle(color: Colors.redAccent,),),
                                 )
                               ],
@@ -94,7 +94,7 @@ class RegisterState extends State<RegisterPage> {
                               )
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 80),
+                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 35),
                             child: Row(
                               children: [
                                 Image.asset(
@@ -102,7 +102,7 @@ class RegisterState extends State<RegisterPage> {
                                   width: 18,
                                 ),
                                 const Padding(
-                                  padding: EdgeInsets.only(left: 31),
+                                  padding: EdgeInsets.only(left: 25),
                                   child: Text("ĐĂNG NHẬP VỚI APPLE", style: TextStyle(color: Colors.black,),),
                                 )
                               ],
